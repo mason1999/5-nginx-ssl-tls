@@ -15,3 +15,7 @@ services:
     image: weshigbee/nginx-echo
     container_name: echo_container_1
     hostname: echo1
+
+  email: # Listens on port 8025 internally
+    image: mailhog/mailhog
+    container_name: email_container
