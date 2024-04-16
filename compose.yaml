@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nginx_image
+    container_name: nginx_container
+    ports:
+      - 80:80
+      - 443:443
+
+  echo_app1:
+    image: weshigbee/nginx-echo
+    container_name: echo_container_1
+    hostname: echo1
